@@ -10,6 +10,7 @@ gem "rake"
 group :development do
   gem "sqlite3"
   gem "pry"
+  gem "rspec"
 end
 
 group :production do

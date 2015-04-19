@@ -1,6 +1,24 @@
 GEM
   remote: https://api.rubygems.org/
   specs:
+    diff-lcs (1.2.5)
+    rspec (3.2.0)
+      rspec-core (~> 3.2.0)
+      rspec-expectations (~> 3.2.0)
+      rspec-mocks (~> 3.2.0)
+    rspec-core (3.2.3)
+      rspec-support (~> 3.2.0)
+    rspec-expectations (3.2.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.2.0)
+    rspec-mocks (3.2.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.2.0)
+    rspec-support (3.2.2)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
     abstract_type (0.0.7)
     adamantium (0.2.0)
       ice_nine (~> 0.11.0)
@@ -70,6 +88,7 @@ DEPENDENCIES
   pg
   pry
   rake
+  rspec
   sequel
   sqlite3
   yaks
