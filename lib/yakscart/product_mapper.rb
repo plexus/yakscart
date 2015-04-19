@@ -2,6 +2,8 @@ module Yakscart
   class ProductMapper < Yaks::Mapper
     attributes :id, :name, :price
 
+    link :self, "/product/{id}"
+
     def price
       object.price / 100
     end

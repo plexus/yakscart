@@ -2,20 +2,17 @@ require "yaks-sinatra"
 require "yaks-html"
 
 module Yakscart
-  class Application < Sinatra::Base
-    register Sinatra::Yaks
-    helpers Sinatra::YaksHelpers
-
-    configure_yaks do
-      mapper_namespace Yakscart
-    end
-
-    get '/' do
-      yaks Product.all
-    end
-  end
-
-  class Product < Sequel::Model
-  end
-
 end
+
+require "yakscart/home_mapper"
+
+require "yakscart/cart"
+require "yakscart/cart_mapper"
+
+require "yakscart/product"
+require "yakscart/product_mapper"
+
+require "yakscart/line_item"
+require "yakscart/line_item_mapper"
+
+require "yakscart/application"

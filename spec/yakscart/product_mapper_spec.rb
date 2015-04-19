@@ -3,7 +3,7 @@ RSpec.describe Yakscart::ProductMapper do
 
   let(:mapper) { Yakscart::ProductMapper.new(yaks_context) }
 
-  it "should map attributes" do
+  it "should map attributes - links - forms" do
     # Pretty print the output so we can inspect and, if all good, paste into the test
     # puts mapper.call(Yakscart::Product.new(name: "guitar", price: 5500)).pp
 
