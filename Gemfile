@@ -8,10 +8,10 @@ gem "yaks-sinatra"
 gem "sequel"
 gem "dotenv"
 gem "rake"
+gem "pry"
 
 group :development do
   gem "sqlite3"
-  gem "pry"
   gem "rspec"
 end
 
