@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+ruby "2.2"
+
 gem "yaks"
 gem "yaks-html"
 gem "yaks-sinatra"
@@ -15,4 +17,5 @@ end
 
 group :production do
   gem "pg"
+  gem "puma"
 end
