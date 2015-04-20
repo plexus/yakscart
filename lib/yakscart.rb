@@ -1,5 +1,6 @@
 require "yaks-sinatra"
 require "yaks-html"
+require "kramdown"
 
 module Yakscart
 end

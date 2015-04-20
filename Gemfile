@@ -8,6 +8,7 @@ gem "yaks-sinatra"
 gem "sequel"
 gem "dotenv"
 gem "rake"
+gem "kramdown"
 gem "pry"
 
 group :development do

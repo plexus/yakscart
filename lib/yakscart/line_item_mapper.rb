@@ -4,7 +4,7 @@ module Yakscart
 
     attributes :quantity, :description, :total
 
-    link '/rel/product', '/product/{product_id}'
+    link '/rels#product', '/product/{product_id}'
 
     def description
       line_item.product.name
@@ -20,6 +20,15 @@ module Yakscart
       media_type "application/x-www-form-urlencoded"
 
       hidden :product_id, value: ->{ line_item.product_id }
+      number :quantity, value: ->{ line_item.quantity }
+    end
+
+    form :delete do
+      action "/cart/line_items"
+      method "POST"
+      media_type "application/x-www-form-urlencoded"
+
+      hidden :product_id, value: 0
       number :quantity, value: ->{ line_item.quantity }
     end
   end

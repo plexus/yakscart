@@ -1,5 +1,5 @@
 module Yakscart
   class HomeMapper < Yaks::Mapper
-    link '/rel/products', '/products'
+    link '/rels#products', '/products'
   end
 end

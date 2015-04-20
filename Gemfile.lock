@@ -2,6 +2,7 @@ GEM
   remote: https://api.rubygems.org/
   specs:
     diff-lcs (1.2.5)
+    kramdown (1.6.0)
     puma (2.11.2)
       rack (>= 1.1, < 2.0)
     rspec (3.2.0)
@@ -87,6 +88,7 @@ PLATFORMS
 
 DEPENDENCIES
   dotenv
+  kramdown
   pg
   pry
   puma

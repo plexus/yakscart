@@ -16,12 +16,17 @@ module Yakscart
 
     configure_yaks do
       mapper_namespace Yakscart
-      rel_template 'http://yakscart.herokuapp.com/rel/{rel}'
+      rel_template 'https://yakscart.herokuapp.com/rels#{rel}'
     end
 
     get '/' do
       yaks :home, mapper: HomeMapper
     end
+
+    get '/rels' do
+      markdown :rels
+    end
+
 
     get '/products' do
       yaks Product.all
