@@ -21,6 +21,11 @@ Because they are non-standard rels, they need to be URI's. They are formed by pr
 
 Links or embeds the current user's shopping cart.
 
+{: id="products"}
+* products
+
+Use on: api root. Links to a list of all products.
+
 {: id="product"}
 * product
 
