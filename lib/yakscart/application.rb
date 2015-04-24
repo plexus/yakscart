@@ -17,6 +17,24 @@ module Yakscart
     configure_yaks do
       mapper_namespace Yakscart
       rel_template 'https://yakscart.herokuapp.com/rels#{rel}'
+
+      after :format do |node, env|
+        next node unless node.is_a? Hexp::Node
+        uri = "#{env['rack.url_scheme']}://#{env['HTTP_HOST']}#{env['PATH_INFO']}"
+        curls = Yaks::Format.media_types.map do |_, media_type|
+          next if media_type =~ /html/
+          H[:li, "curl -H Accept:#{media_type} #{uri}"]
+        end
+        node.replace('.footer') do |footer|
+          Hexp::List[
+            H[:br],
+            H[:br],
+            "To see other output formats:",
+            H[:ul, curls.compact],
+            footer
+          ]
+        end
+      end
     end
 
     get '/' do
